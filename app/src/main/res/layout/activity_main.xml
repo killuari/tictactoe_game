@@ -1,115 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.Tic_tac_toe.AppBarOverlay">
+        android:theme="@style/Theme.Tic_tac_toe.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/Theme.Tic_tac_toe.PopupOverlay" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
-
-    <include layout="@layout/content_main"/>
+    <TextView
+        android:id="@+id/difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="39dp" />
 
     <ImageView
-        android:layout_width="390dp"
+        android:id="@+id/feld"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:src="@drawable/feld" />
 
+
     //1
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="180dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="102dp"
+        android:layout_height="94dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="146dp" />
     //2
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="180dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="94dp"
+        android:layout_height="77dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="170dp" />
     //3
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="180dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="85dp"
+        android:layout_height="68dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="170dp" />
     //4
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="310dp"
-        android:src="@drawable/tic_tac_toe_empty" />
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="84dp"
+        android:layout_height="78dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="306dp" />
 
     //5
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="310dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="88dp"
+        android:layout_height="85dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="291dp" />
     //6
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="310dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="76dp"
+        android:layout_height="82dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="294dp" />
     //7
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="440dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="83dp"
+        android:layout_height="85dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="442dp" />
     //8
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="440dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="82dp"
+        android:layout_height="80dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="447dp" />
     //9
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="440dp"
-        android:src="@drawable/tic_tac_toe_empty" />
-
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="73dp"
+        android:layout_height="76dp"
+        android:src="@drawable/tic_tac_toe_empty"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="436dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        tools:layout_editor_absoluteX="329dp"
+        tools:layout_editor_absoluteY="629dp" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
