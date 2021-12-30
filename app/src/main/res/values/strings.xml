@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">tic_tac_toe</string>
+    <string name="app_name">Tic Tac Toe</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -13,4 +13,5 @@
     <string name="impossible">Impossible</string>
     <string name="easy">Easy</string>
     <string name="difficulty">Medium</string>
+    <string name="reset">Reset</string>
 </resources>
