@@ -88,23 +88,31 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        if(availableBtns.size == 0) {
+            Snackbar.make(binding.coordinatorLayout, "Tie!", Snackbar.LENGTH_LONG).show()
+            won = true
+        }
         return true
     }
 
 
     private fun reset() {
-//        for(bt in btns) {
-//            bt.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-//        }
-        binding.imageButton1.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton2.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton3.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton4.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton5.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton6.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton7.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton8.setBackgroundResource(R.drawable.tic_tac_toe_empty)
-        binding.imageButton9.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+        btns = mutableListOf(binding.imageButton1, binding.imageButton2, binding.imageButton3, binding.imageButton4,
+            binding.imageButton5, binding.imageButton6, binding.imageButton7, binding.imageButton8, binding.imageButton9)
+        for(bt in btns) {
+            bt.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+        }
+//        binding.imageButton1.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton2.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton3.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton4.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton5.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton6.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton7.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton8.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        binding.imageButton9.setBackgroundResource(R.drawable.tic_tac_toe_empty)
+//        btns = mutableListOf(binding.imageButton1, binding.imageButton2, binding.imageButton3, binding.imageButton4,
+//            binding.imageButton5, binding.imageButton6, binding.imageButton7, binding.imageButton8, binding.imageButton9)
 
         availableBtns = btns
         btns_o = mutableListOf()
@@ -115,7 +123,7 @@ class MainActivity : AppCompatActivity() {
     private fun checkWin_x(): Boolean {
         setWins()
         for(win in wins_x) {
-            if(win){ return true }
+            if(win) { return true }
         }
         return false
     }
@@ -123,7 +131,7 @@ class MainActivity : AppCompatActivity() {
     private fun checkWin_o(): Boolean {
         setWins()
         for(win in wins_o) {
-            if(win){ return true }
+            if(win) { return true }
         }
         return false
     }
@@ -136,7 +144,8 @@ class MainActivity : AppCompatActivity() {
             binding.imageButton2 in btns_x && binding.imageButton5 in btns_x && binding.imageButton8 in btns_x,
             binding.imageButton3 in btns_x && binding.imageButton6 in btns_x && binding.imageButton9 in btns_x,
             binding.imageButton1 in btns_x && binding.imageButton5 in btns_x && binding.imageButton9 in btns_x,
-            binding.imageButton3 in btns_x && binding.imageButton5 in btns_x && binding.imageButton7 in btns_x,)
+            binding.imageButton3 in btns_x && binding.imageButton5 in btns_x && binding.imageButton7 in btns_x)
+
         wins_o = mutableListOf(binding.imageButton1 in btns_o && binding.imageButton2 in btns_o && binding.imageButton3 in btns_o,
             binding.imageButton4 in btns_o && binding.imageButton5 in btns_o && binding.imageButton6 in btns_o,
             binding.imageButton7 in btns_o && binding.imageButton8 in btns_o && binding.imageButton9 in btns_o,
@@ -144,7 +153,7 @@ class MainActivity : AppCompatActivity() {
             binding.imageButton2 in btns_o && binding.imageButton5 in btns_o && binding.imageButton8 in btns_o,
             binding.imageButton3 in btns_o && binding.imageButton6 in btns_o && binding.imageButton9 in btns_o,
             binding.imageButton1 in btns_o && binding.imageButton5 in btns_o && binding.imageButton9 in btns_o,
-            binding.imageButton3 in btns_o && binding.imageButton5 in btns_o && binding.imageButton7 in btns_o,)
+            binding.imageButton3 in btns_o && binding.imageButton5 in btns_o && binding.imageButton7 in btns_o)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
